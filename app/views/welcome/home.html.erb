@@ -1,6 +1,20 @@
 <body class="material_background_grey">
   <h1 class="header">This is the home page</h1>
 
-  <p class="link"><%= link_to('About', {:controller => 'welcome', :action => 'about'}) %></p>
+
+  <div class="container">
+    <h1 style="color: white">3 column layout</h1>
+    <div class="row">
+      <div class="col-md-4" style="background-color: purple; text-align: center; color: white">
+          First
+      </div>
+      <div class="col-md-4" style="background-color: blue; color: white">
+          Second
+      </div>
+      <div class="col-md-4" style="background-color: green; color: white">
+          Third
+      </div>
+    </div>
+  </div>
 
 </body>

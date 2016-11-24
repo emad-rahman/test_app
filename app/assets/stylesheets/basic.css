@@ -11,12 +11,16 @@
 }
 
 .link {
-  text-decoration: none;
   font-size: 20px;
-  color: white;
   text-align: center;
+  margin-top: 10px;
 }
 
 .remove_underline {
   text-decoration: none;
+}
+
+.link_color {
+  text-decoration: none !important;
+  color: white;
 }
