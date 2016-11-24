@@ -1,0 +1,22 @@
+.header {
+  margin-top: 50px;
+  text-align: center;
+  font-size: 75px;
+  font-style: Arial;
+  color: white
+}
+
+.material_background_grey {
+  background-color: #607D8B
+}
+
+.link {
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  text-align: center;
+}
+
+.remove_underline {
+  text-decoration: none;
+}
