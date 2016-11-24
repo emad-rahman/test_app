@@ -11,9 +11,10 @@
 }
 
 .link {
-  font-size: 20px;
+  font-size: 25px;
   text-align: center;
   margin-top: 10px;
+  font-weight: bolder;
 }
 
 .remove_underline {
@@ -23,4 +24,16 @@
 .link_color {
   text-decoration: none !important;
   color: white;
+}
+
+.title_home {
+  color:white;
+  text-align:center;
+  margin-top:2em;
+  font-size: 40px;
+  font-family: sans-serif;
+}
+
+.title_layout {
+  font-size: 15px;
 }

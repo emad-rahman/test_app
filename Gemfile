@@ -50,3 +50,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 
 gem 'sprockets-rails', '3.2.0'
+gem 'google_font_extractor', '~> 0.0.2'
+# gem 'google-webfonts-rails', '~> 0.0.4'
