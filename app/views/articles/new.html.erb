@@ -1,5 +1,10 @@
-<h1>New Article</h1>
+<h1 style="text-align: center; margin-top: 2em"> Create an article </h1><br><br><br>
 
-<%= render 'form', article: @article %>
 
-<%= link_to 'Back', articles_path %>
+<%= form_for @article, :url => {:action => 'create'} do |f| %>
+  <center>
+    <%= f.text_field :title, size: "50x1", :placeholder => 'Title'%><br><br><br>
+    <%= f.text_area :description, size: "100x10", :placeholder => 'Description' %><br><br>
+    <%= f.submit %>
+  </center
+<% end %>
