@@ -4,17 +4,21 @@
       <!-- blank -->
     </div>
     <div class="col-md-6">
-      <h1 class="title_home">Playgound for your dreams.</h1>
+      <h1 class="title_home">Playground for your dreams.</h1>
       <br><br>
-      <h7 style="color: white; margin-top: 1em">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit, tortor vel sagittis imdiet, mauris arcu feugiat justo, eget vehicula ante leo sit amet risus.</h3>
+      <h7 style="color: white; margin-top: 1em; text-align: center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit, tortor vel sagittis imdiet, mauris arcu feugiat justo, eget vehicula ante leo sit amet risus.</h7>
       <br><br><br>
       <center>
         <button type="button" class="btn btn-green btn-lg" style="margin-right: 1em">
-          Dive In
+          <%= link_to({:controller => 'projects', :action => 'index'}) do %>
+            <div class="link_color" style="text-decoration:none;">Projects</div>
+          <% end %>
         </button>
         <!-- <div style="margin-right: 2em"></div> -->
         <button type="button" class="btn btn-not_important btn-lg">
-          <a href="https://github.com/guardianz95/test_app" style="text-decoration:none;" target="_blank">Github</a>
+          <a href="https://github.com/guardianz95/test_app" style="text-decoration:none;" target="_blank">
+            <div style="color: #2979FF">Github</div>
+          </a>
         </button>
       </center>
     </div>
