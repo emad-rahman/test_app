@@ -49,6 +49,14 @@
     </div>
   </nav>
 
+  <% flash.each do |name, message| %>
+    <ul>
+      <div style="font-size: 15px; color: #00E676">
+        <li><%= message %></li>
+      </div>
+    </ul>
+  <% end %>
+
     <%= yield %>
   </body>
 </html>
