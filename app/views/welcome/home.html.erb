@@ -1,26 +1,32 @@
 <div class="container-fluid">
-  <div class="row" style="background-color: #2979FF; height: 27em">
+  <div class="row" style="background-color: #2979FF; height: 27em;">
     <div class="col-md-3">
       <!-- blank -->
     </div>
     <div class="col-md-6">
-      <h1 class="title_home">Playground for your dreams.</h1>
+      <div class="animated fadeIn" style="-webkit-animation-delay: 0.25s;">
+        <h1 class="title_home">Playground for your dreams.</h1>
+      </div>
       <br><br>
-      <h7 style="color: white; margin-top: 1em; text-align: center">My personal testing ground. Here I will be using ruby on rails to try out new things. Do not store personal information on this site and note that your account may be deleted, altered, or viewed at any time. Please use throw away passwords and usernames.</h7>
+      <div class="animated fadeIn" style="-webkit-animation-delay: 0.5s;">
+        <h7 style="color: white; margin-top: 1em; text-align: center">My personal testing ground. Here I will be using ruby on rails to try out new things. Do not store personal information on this site and note that your account may be deleted, altered, or viewed at any time. Please use throw away passwords and usernames.</h7>
+      </div>
       <br><br><br><br>
-      <center>
-        <button type="button" class="btn btn-green btn-lg" style="margin-right: 1em">
-          <%= link_to({:controller => 'projects', :action => 'index'}) do %>
-            <div class="link_color">Projects</div>
-          <% end %>
-        </button>
-        <!-- <div style="margin-right: 2em"></div> -->
-        <button type="button" class="btn btn-not_important btn-lg">
-          <a href="https://github.com/guardianz95/test_app" style="text-decoration:none;" target="_blank">
-            <div style="color: #2979FF">Github</div>
-          </a>
-        </button>
-      </center>
+      <div class="animated fadeIn" style="-webkit-animation-delay: 0.75s;">
+        <center>
+          <button type="button" class="btn btn-green btn-lg" style="margin-right: 1em">
+            <%= link_to({:controller => 'projects', :action => 'index'}) do %>
+              <div class="link_color">Projects</div>
+            <% end %>
+          </button>
+          <!-- <div style="margin-right: 2em"></div> -->
+          <button type="button" class="btn btn-not_important btn-lg">
+            <a href="https://github.com/guardianz95/test_app" style="text-decoration:none;" target="_blank">
+              <div style="color: #2979FF">Github</div>
+            </a>
+          </button>
+        </center>
+      </div>
     </div>
     <div class="col-md-3">
       <!-- blank -->
@@ -32,17 +38,19 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-md-4" style="border-right: 1px solid #CFD8DC; height: 23em">
-      <h3 style="text-align: center">Lorem ipsum dolor si</h3><br>
-      <p >amet, consectetur adipiscing elit. Nunc vitae lectus eget velit placerat elementum. Nullam augue magna, maximus eget nibh nec, porta lobortis neque. Vestibulum finibus, ex vel sagittis dictum, nulla ligula varius velit, egestas posuere ante felis ut metus. Nulla faucibus, leo non efficitur maximus, eros libero ultrices elit, quis ornare metus odio quis magna. Suspendisse rutrum pharetra fringilla. Cras commodo ipsum ut mauris aliquam, eget iaculis odio tincidunt. Donec gravida id eros sit amet ultricies. In hac habitasse platea dictumst. Maecenas eget ex vehicula, porta justo at, blandit tortor. Nam accumsan diam id dolor rutrum dapibus. Maecenas ac dui ut tortor efficitur volutpat accumsa</p>
-    </div>
-    <div class="col-md-4" style="border-right: 1px solid #CFD8DC; height: 23em">
-      <h3 style="text-align: center">Aenean molestie</h3><br>
-      <p>Donec ullamcorper in ligula a volutpat. Integer pretium vulputate augue, at feugiat libero dignissim non. Vestibulum vitae faucibus nibh. Quisque semper accumsan quam, ut ornare nulla imperdiet ac. Sed efficitur dolor felis. In velit mauris, tempor in diam ut, tincidunt faucibus mauris. Sed luctus viverra erat</p>
-    </div>
-    <div class="col-md-4" style="height: 23em">
-      <h3 style="text-align: center">Quisque sed lacus</h3><br>
-      <p>Nunc porttitor condimentum commodo. Morbi vel condimentum lectus, eget blandit metus. Sed facilisis nec libero vel laoreet. Mauris ut justo vel quam porttitor iaculis id non neque. Nullam et aliquam nulla. Ut leo eros, feugiat vitae vehicula ut, tempus vel ipsum Nullam dui felis, tincidunt et augue a, placerat scelerisque ligula. Pellentesque sit amet suscipit metus. Ut viverra vulputate est, vitae iaculis ligula pretium vitae. Curabitur accumsan mi sit amet lacus dapibus, sit amet hendrerit neque iaculis. Quisque eget nisi vel lorem gravida placerat sed non felis. Nam maximus vitae sem ut mattis.</p>
+    <div class="animated fadeIn" style="-webkit-animation-delay: 1s;">
+      <div class="col-md-4" style="border-right: 1px solid #CFD8DC; height: 23em">
+        <h3 style="text-align: center">Lorem ipsum dolor si</h3><br>
+        <p >amet, consectetur adipiscing elit. Nunc vitae lectus eget velit placerat elementum. Nullam augue magna, maximus eget nibh nec, porta lobortis neque. Vestibulum finibus, ex vel sagittis dictum, nulla ligula varius velit, egestas posuere ante felis ut metus. Nulla faucibus, leo non efficitur maximus, eros libero ultrices elit, quis ornare metus odio quis magna. Suspendisse rutrum pharetra fringilla. Cras commodo ipsum ut mauris aliquam, eget iaculis odio tincidunt. Donec gravida id eros sit amet ultricies. In hac habitasse platea dictumst. Maecenas eget ex vehicula, porta justo at, blandit tortor. Nam accumsan diam id dolor rutrum dapibus. Maecenas ac dui ut tortor efficitur volutpat accumsa</p>
+      </div>
+      <div class="col-md-4" style="border-right: 1px solid #CFD8DC; height: 23em">
+        <h3 style="text-align: center">Aenean molestie</h3><br>
+        <p>Donec ullamcorper in ligula a volutpat. Integer pretium vulputate augue, at feugiat libero dignissim non. Vestibulum vitae faucibus nibh. Quisque semper accumsan quam, ut ornare nulla imperdiet ac. Sed efficitur dolor felis. In velit mauris, tempor in diam ut, tincidunt faucibus mauris. Sed luctus viverra erat</p>
+      </div>
+      <div class="col-md-4" style="height: 23em">
+        <h3 style="text-align: center">Quisque sed lacus</h3><br>
+        <p>Nunc porttitor condimentum commodo. Morbi vel condimentum lectus, eget blandit metus. Sed facilisis nec libero vel laoreet. Mauris ut justo vel quam porttitor iaculis id non neque. Nullam et aliquam nulla. Ut leo eros, feugiat vitae vehicula ut, tempus vel ipsum Nullam dui felis, tincidunt et augue a, placerat scelerisque ligula. Pellentesque sit amet suscipit metus. Ut viverra vulputate est, vitae iaculis ligula pretium vitae. Curabitur accumsan mi sit amet lacus dapibus, sit amet hendrerit neque iaculis. Quisque eget nisi vel lorem gravida placerat sed non felis. Nam maximus vitae sem ut mattis.</p>
+      </div>
     </div>
   </div>
 </div>

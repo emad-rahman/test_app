@@ -64,3 +64,9 @@
   color: white;
   height: 5em;
 }
+
+.animation_delay_home {
+  /*-webkit-animation-duration: 3s;*/
+  -webkit-animation-delay: 2s;
+  /*-webkit-animation-iteration-count: infinite;*/
+}
