@@ -8,23 +8,22 @@
 <h1>Listing Articles</h1>
 
 <table>
-  <colgroup>
-       <col span="1" style="width: 15%;">
-       <col span="1" style="width: 50%;">
-    </colgroup>
   <tr>
     <th>Title</th>
-    <th>Description</th>
-    <th></th>
-    <th></th>
-    <th></th>
   </tr>
-
+<% index = 1 %>
 <% @articles.each do |article| %>
   <tr>
-    <td><%= article.title %></td>
-    <td><%= article.description %></td>
+    <td>
+
+      <%= link_to(article_path(article)) do %>
+        <div style="text-decoration: none !important; color: blue;">
+          <%= "#{index}. " %><%= article.title %>
+        </div>
+      <% end %>
+    </td>
   </tr>
+  <% index += 1 %>
 <% end %>
 </table>
 
