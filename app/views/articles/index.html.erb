@@ -3,3 +3,29 @@
 <div style="margin-top: 2em; font-size: 30px;">
   <%= link_to('new', {:action => 'new'})%>
 </div>
+
+<br><br>
+<h1>Listing Articles</h1>
+
+<table>
+  <colgroup>
+       <col span="1" style="width: 15%;">
+       <col span="1" style="width: 50%;">
+    </colgroup>
+  <tr>
+    <th>Title</th>
+    <th>Description</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @articles.each do |article| %>
+  <tr>
+    <td><%= article.title %></td>
+    <td><%= article.description %></td>
+  </tr>
+<% end %>
+</table>
+
+<br>
