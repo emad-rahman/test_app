@@ -1,30 +1,42 @@
-<h1> This is index </h1>
-
-<div style="margin-top: 2em; font-size: 30px; text-align:center">
-  <%= link_to('new', {:action => 'new'})%>
+<div style="text-align: center">
+  <h1> Alpha Blog </h1>
 </div>
 
-<br><br>
-<h1>Listing Articles</h1>
+<div style="margin-top: 2em; font-size: 30px; text-align:center;">
+  <%= link_to({:action => 'new'}) do%>
+    <div style="color:blue">
+      New
+    </div>
+  <% end %>
+</div>
 
-<table>
-  <tr>
-    <th>Title</th>
-  </tr>
-<% index = 1 %>
-<% @articles.each do |article| %>
-  <tr>
-    <td>
+<br><br><br>
 
-      <%= link_to(article_path(article)) do %>
-        <div style="text-decoration: none !important; color: blue;">
-          <%= "#{index}. " %><%= article.title %>
-        </div>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-9">
+      <h1>Listing Articles</h1>
+      <table>
+        <tr>
+          <th>Title</th>
+        </tr>
+      <% index = 1 %>
+      <% @articles.each do |article| %>
+        <tr>
+          <td>
+            <%= link_to(article_path(article)) do %>
+              <div style="text-decoration: none !important; color: blue;">
+                <%= "#{index}. " %><%= article.title %>
+              </div>
+            <% end %>
+          </td>
+        </tr>
+        <% index += 1 %>
       <% end %>
-    </td>
-  </tr>
-  <% index += 1 %>
-<% end %>
-</table>
-
-<br>
+      </table>
+      <br>
+    </div>
+    <div class="col-md-2"></div>
+  </div>
+</div>
