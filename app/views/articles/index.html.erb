@@ -19,14 +19,14 @@
       <h1>Listing Articles</h1>
       <table>
         <tr>
-          <th>Title</th>
+          <th style="font-size: 25px;">Title</th><br>
         </tr>
       <% index = 1 %>
       <% @articles.each do |article| %>
         <tr>
           <td>
             <%= link_to(article_path(article)) do %>
-              <div style="text-decoration: none !important; color: blue;">
+              <div style="text-decoration: none !important; color: blue; font-size:15px;">
                 <%= "#{index}. " %><%= article.title %>
               </div>
             <% end %>
