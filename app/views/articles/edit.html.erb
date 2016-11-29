@@ -16,6 +16,6 @@
   <center>
     <%= f.text_field :title, size: "50x1", :placeholder => 'Title'%><br><br><br>
     <%= f.text_area :description, size: "100x10", :placeholder => 'Description' %><br><br>
-    <%= f.submit %>
+  <%= button_to('Cancel', article_path(@article), :method => :get)%><%= f.submit %>
   </center>
 <% end %>

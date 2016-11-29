@@ -1,13 +1,4 @@
 <h1 style="text-align: center; margin-top: 2em">Show</h1>
-
-
-<%= link_to({:action => 'index'}) do %>
-  <div style="text-decoration: none !important; text-align: center; color: blue;">
-      <h2>Index</h2>
-  </div>
-<% end %> <br>
-
-
 <div class="container-fluid">
   <div class="row">
     <div class="col-md-1"></div>
@@ -28,13 +19,12 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-md-1"></div>
-    <div class="col-md-9"></div>
-    <div class="col-md-1">
-      <%= link_to(edit_article_path(@article)) do %>
-        <div style="color:edit; color: blue; font-size:20px;">
-          Edit
-        </div>
-      <% end %> <br><br><br>
+    <div class="col-md-8"></div>
+    <div class="col-md-2">
+      <span class="inline">
+        <%= button_to('<< Back', {:action => 'index'}, :method => :get) -%>
+        <%= button_to('Edit', edit_article_path(@article), :method => :get) -%>
+      </span>
     </div>
   </div>
 </div>
