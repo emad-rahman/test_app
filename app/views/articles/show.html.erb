@@ -1,33 +1,74 @@
-<h1 style="text-align: center; margin-top: 2em">Show</h1>
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-md-1"></div>
-    <div class="col-md-9">
-      <div>
-        <br>
-        <h3 style="margin-left: 1em;">Title:</h3>
-        <blockquote style="margin-left: 3em;"><code style="color: black; font-size:15px;"><%= @article.title %></blockquote></code><br><br>
-        <h3 style="margin-left: 1em;">Description</h3>
-        <blockquote style="margin-left: 3em;"><code style="color: black; font-size:15px;"><%= @article.description %></blockquote></code> </p><br><br>
-        <br>
-      </div>
-    </div>
-    <div class="col-md-1"></div>
-  </div>
-</div>
+<head>
+  <title>Show Article</title>
+</head>
 
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-md-1"></div>
-    <div class="col-md-8"></div>
-    <div class="col-md-2">
-      <div style="display: inline; float: right;">
-        <span style="display: inline; float: right; ">
-          <%= button_to('<< Back', {:action => 'index'}, :method => :get) %>
-          <%= button_to('Edit', edit_article_path(@article), :method => :get) %>
-          <%= button_to('Delete', article_path(@article), :method => :delete, :data => {:confirm => "Are you sure?"}) %>
-        </span>
+<body class="background_article">
+  <h1 class="title_article">Show</h1>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-2"></div>
+      <div class="col-md-8">
+            <h3 style="text-align: center; color: white;">Title:</h3><br>
+            <blockquote style="background-color: white"><code style="color: black; font-size:15px;"><%= @article.title %></blockquote></code><br><br>
       </div>
+      <div class="col-md-2"></div>
     </div>
   </div>
-</div>
+
+<br><br><br>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-2"></div>
+      <div class="col-md-8">
+        <div>
+            <br>
+              <h3 style="color: white; text-align: center">Description:</h3><br>
+            <blockquote style="background-color: white;"><code style="color: black; font-size:15px;"><%= @article.description %></blockquote></code> </p><br><br>
+            <br>
+        </div>
+      </div>
+      <div class="col-md-2"></div>
+    </div>
+  </div>
+
+
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-2"></div>
+      <div class="col-md-8">
+        <center>
+          <div style="display: inline;">
+            <span style="display: inline;">
+              <div class="animated fadeIn" style="-webkit-animation-delay: 0.5s;">
+                <button type="button" class="btn btn-not_important btn-lg" style="background-color: #42A5F5">
+                  <%= link_to({:action => 'index'}) do%>
+                    <div style="color:white">
+                      Back
+                    </div>
+                  <% end %>
+                </button>
+                <button type="button" class="btn btn-not_important btn-lg" style="background-color: #42A5F5">
+                  <%= link_to(edit_article_path(@article)) do%>
+                    <div style="color:white">
+                      Edit
+                    </div>
+                  <% end %>
+                </button>
+                <button type="button" class="btn btn-not_important btn-lg" style="background-color: #42A5F5">
+                  <%= link_to(article_path(@article), :method => :delete, :data => {:confirm => "Are you sure?"}) do%>
+                    <div style="color:white">
+                      Delete
+                    </div>
+                  <% end %>
+                </button>
+              </div>
+            </span>
+          </div>
+      </center>
+      </div>
+      <div class="col-md-2"></div>
+    </div>
+  </div>
+</body>
