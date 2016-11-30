@@ -14,46 +14,17 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
     <!-- testing address bar color change in chrome android -->
     <meta name="theme-color" content="#448AFF" />
     <!-- testing address bar color change in safari iphone -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   </head>
+
+
+
   <body>
-
-
-  <nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <div class="navbar-brand" style="margin-right: 1em; font-size: 25px;">
-          MegaAwesomeProjects
-        </div>
-      </div>
-      <ul class="nav navbar-nav">
-        <li><%=link_to('Home', {:controller => 'welcome', :action => 'home'})%></li>
-        <li><%=link_to('About', {:controller => 'welcome', :action => 'about'})%></li>
-        <li class="dropdown">
-        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Projects
-        <span class="caret"></span></a>
-        <ul class="dropdown-menu">
-          <li><%= link_to('Projects Homepage', {:controller => 'projects', :action => 'index'}) %></li>
-          <li><%= link_to('1. alpha_blog', {:controller => 'articles', :action => 'index'}) %></li>
-        </ul>
-      </li>
-
-
-
-        <li><a href="https://github.com/guardianz95/test_app" target="_blank">Github</a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-      <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up (coming soon)</a></li>
-      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login (coming soon)</a></li>
-    </ul>
-    </div>
-  </nav>
-
+  <%= render 'layouts/navbar' %>
   <% flash.each do |name, message| %>
     <ul>
       <div style="font-size: 15px; color: #00E676">
@@ -61,7 +32,9 @@
       </div>
     </ul>
   <% end %>
-
-    <%= yield %>
+  <%= yield %>
   </body>
+
+
+  
 </html>
