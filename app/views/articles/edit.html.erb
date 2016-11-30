@@ -14,13 +14,21 @@
     </ul>
   <% end %>
 
-  <h1 class="title_article"> Create an article </h1><br><br><br>
+  <div class="animated fadeIn" style="-webkit-animation-delay: 0.25s;">
+    <h1 class="title_article"> Edit an article </h1><br><br><br>
+  </div>
 
   <%= form_for @article, :url => {:action => 'update'} do |f| %>
     <center>
-      <%= f.text_field :title, size: "50x1", :placeholder => 'Title'%><br><br><br><br>
-      <%= f.text_area :description, size: "100x10", :placeholder => 'Description' %><br><br>
-      <%= f.submit %>
+      <div class="animated fadeIn" style="-webkit-animation-delay: 0.5s;">
+        <%= f.text_field :title, size: "50x1", :placeholder => 'Title'%><br><br><br><br>
+      </div>
+      <div class="animated fadeIn" style="-webkit-animation-delay: 0.75s;">
+        <%= f.text_area :description, size: "100x10", :placeholder => 'Description' %><br><br>
+      </div>
+      <div class="animated fadeIn" style="-webkit-animation-delay: 1s;">
+        <%= f.submit %>
+      </div>
     </center>
   <% end %>
 </body>
