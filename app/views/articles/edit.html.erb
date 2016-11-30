@@ -1,21 +1,26 @@
-<% if @article.errors.any? %>
-<h3 style="margin-left: 1em; color: red;">The following error(s) casued a problem.<h3>
-  <ul>
-    <% @article.errors.full_messages.each do |error|%>
-        <div style="color: red; font-size: 15px;">
-          <li><%= error %></li>
-        </div>
-    <% end %>
-  </ul>
-<% end %>
+<head>
+  <title>New Article</title>
+</head>
 
-<h1 style="text-align: center; margin-top: 2em"> Edit an article </h1><br><br><br>
+<body class="background_article">
+  <% if @article.errors.any? %>
+  <h3 style="margin-left: 1em; color: red;">The following error(s) casued a problem.<h3>
+    <ul>
+      <% @article.errors.full_messages.each do |error|%>
+          <div style="color: red; font-size: 15px;">
+            <li><%= error %></li>
+          </div>
+      <% end %>
+    </ul>
+  <% end %>
 
+  <h1 class="title_article"> Create an article </h1><br><br><br>
 
-<%= form_for @article, :url => {:action => 'update'} do |f| %>
-  <center>
-    <%= f.text_field :title, size: "50x1", :placeholder => 'Title'%><br><br><br>
-    <%= f.text_area :description, size: "100x10", :placeholder => 'Description' %><br><br>
-    <%= f.submit %>
-  </center>
-<% end %>
+  <%= form_for @article, :url => {:action => 'update'} do |f| %>
+    <center>
+      <%= f.text_field :title, size: "50x1", :placeholder => 'Title'%><br><br><br><br>
+      <%= f.text_area :description, size: "100x10", :placeholder => 'Description' %><br><br>
+      <%= f.submit %>
+    </center>
+  <% end %>
+</body>
