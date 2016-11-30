@@ -83,3 +83,16 @@
   margin-right: 1em;
   font-size: 25px;
 }
+
+.background_article {
+  background-color: #00E676;
+}
+
+.title_article {
+  color:white;
+  text-align:center;
+  margin-top:2em;
+  font-size: 50px;
+  font-family: sans-serif;
+  font-weight: bold;
+}

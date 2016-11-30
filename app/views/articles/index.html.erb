@@ -1,42 +1,48 @@
-<div style="text-align: center">
-  <h1> Alpha Blog </h1>
-</div>
+<head>
+  <title>Alpha Blog</title>
+</head>
 
-<div style="margin-top: 2em; font-size: 30px; text-align:center;">
-  <%= link_to({:action => 'new'}) do%>
-    <div style="color:blue">
-      New
-    </div>
-  <% end %>
-</div>
+<body class="background_article">
 
-<br><br><br>
-
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-md-1"></div>
-    <div class="col-md-9">
-      <h1>Listing Articles</h1>
-      <table>
-        <tr>
-          <th style="font-size: 25px;">Title</th><br>
-        </tr>
-      <% index = 1 %>
-      <% @articles.each do |article| %>
-        <tr>
-          <td>
-            <%= link_to(article_path(article)) do %>
-              <div style="text-decoration: none !important; color: blue; font-size:15px;">
-                <%= "#{index}. " %><%= article.title %>
-              </div>
-            <% end %>
-          </td>
-        </tr>
-        <% index += 1 %>
-      <% end %>
-      </table>
-      <br>
-    </div>
-    <div class="col-md-2"></div>
+  <div class="animated fadeIn" style="-webkit-animation-delay: 0.25s;">
+    <h1 class="title_article">Alpha Blog</h1><br>
   </div>
-</div>
+
+  <div class="animated fadeIn" style="-webkit-animation-delay: 0.5s;">
+    <center>
+      <button type="button" class="btn btn-not_important btn-lg" style="background-color: #42A5F5">
+        <%= link_to({:action => 'new'}) do%>
+          <div style="color:white">
+            New
+          </div>
+        <% end %>
+      </button>
+    </center>
+  </div>
+
+  <br><br><br>
+
+  <div class="container-fluid">
+    <div class="row" style="width: 60em; margin: 0 auto; height: 61em; background-color: white; border-radius: 50px;">
+      <div class="col-md-2"></div>
+      <div class="col-md-8">
+        <div class="animated fadeIn" style="-webkit-animation-delay: 0.75s;">
+          <br><br><h1 style="text-align: center; color: grey">Articles</h1><br>
+        </div>
+        <% @articles.each do |article| %>
+          <div class="animated fadeIn" style="-webkit-animation-delay: 1s;">
+            <button type="button" class="btn btn_projects_index btn-block" style="margin-top: 2em;">
+              <%= link_to(article_path(article)) do %>
+                <div class="link_color" style="font-size:1.8em; font-weight: bolder ;vertical-align: middle;">
+                  <%= article.title %>
+                </div>
+              <% end %>
+            </button>
+          </div>
+        <% end %>
+        <br>
+      </div>
+      <div class="col-md-2"></div>
+    </div>
+  </div>
+</body>
