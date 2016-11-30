@@ -1,4 +1,5 @@
 class ArticlesController < ApplicationController
+  layout "article"
 
   before_action :set_article, only: [:edit, :update, :show, :destroy]
   def index
