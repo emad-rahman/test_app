@@ -74,3 +74,12 @@
 .inline {
   display: inline-block !important;
 }
+
+.navbar-default-bg {
+  background-color: white;
+}
+
+#logo {
+  margin-right: 1em;
+  font-size: 25px;
+}
