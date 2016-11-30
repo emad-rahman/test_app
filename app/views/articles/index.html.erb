@@ -21,28 +21,29 @@
   </div>
 
   <br><br><br>
-
-  <div class="container-fluid">
-    <div class="row" style="width: 60em; margin: 0 auto; height: 61em; background-color: white; border-radius: 50px;">
-      <div class="col-md-2"></div>
-      <div class="col-md-8">
-        <div class="animated fadeIn" style="-webkit-animation-delay: 0.75s;">
-          <br><br><h1 style="text-align: center; color: grey">Articles</h1><br>
-        </div>
-        <% @articles.each do |article| %>
-          <div class="animated fadeIn" style="-webkit-animation-delay: 1s;">
-            <button type="button" class="btn btn_projects_index btn-block" style="margin-top: 2em;">
-              <%= link_to(article_path(article)) do %>
-                <div class="link_color" style="font-size:1.8em; font-weight: bolder ;vertical-align: middle;">
-                  <%= article.title %>
-                </div>
-              <% end %>
-            </button>
+  <div class="animated fadeIn" style="-webkit-animation-delay: 1s;">
+    <div class="container-fluid">
+      <div class="row" style="width: 60em; margin: 0 auto; height: 61em; background-color: white; border-radius: 50px;">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+          <div class="animated fadeIn" style="-webkit-animation-delay: 1.25s;">
+            <br><br><h1 style="text-align: center; color: grey">Articles</h1><br>
           </div>
-        <% end %>
-        <br>
+          <% @articles.each do |article| %>
+            <div class="animated fadeIn" style="-webkit-animation-delay: 1.5s;">
+              <button type="button" class="btn btn_projects_index btn-block" style="margin-top: 2em;">
+                <%= link_to(article_path(article)) do %>
+                  <div class="link_color" style="font-size:1.8em; font-weight: bolder ;vertical-align: middle;">
+                    <%= article.title %>
+                  </div>
+                <% end %>
+              </button>
+            </div>
+          <% end %>
+          <br>
+        </div>
+        <div class="col-md-2"></div>
       </div>
-      <div class="col-md-2"></div>
     </div>
   </div>
 </body>
