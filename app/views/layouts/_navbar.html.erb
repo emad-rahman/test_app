@@ -18,11 +18,15 @@
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <li>
-            <span class="glyphicon glyphicon-user">
-              <%= link_to('Sign Up', new_user_for_blog_registration_path) %>
+            <span class="glyphicon glyphicon-user" style="margin-right: 3em; margin-top:15px">
+              <%= link_to('Register', new_user_for_blog_registration_path) %>
             </span>
           </li>
-          <li><span class="glyphicon glyphicon-log-in"></span> Login (coming soon)</a></li>
+          <li>
+            <span class="glyphicon glyphicon-log-in" style="margin-top:15px">
+              <%= link_to('Login',  new_user_for_blog_session_path) %>
+            </span>
+          </li>
         </ul>
     </div>
   </div>
