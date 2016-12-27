@@ -17,8 +17,12 @@
           <li><%=link_to('About', welcome_about_path)%></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up (coming soon)</a></li>
-          <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login (coming soon)</a></li>
+          <li>
+            <span class="glyphicon glyphicon-user">
+              <%= link_to('Sign Up', new_user_for_blog_registration_path) %>
+            </span>
+          </li>
+          <li><span class="glyphicon glyphicon-log-in"></span> Login (coming soon)</a></li>
         </ul>
     </div>
   </div>
