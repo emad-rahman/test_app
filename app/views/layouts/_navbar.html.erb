@@ -19,12 +19,20 @@
         <ul class="nav navbar-nav navbar-right">
           <li>
             <span class="glyphicon glyphicon-user" style="margin-right: 3em; margin-top:15px">
-              <%= link_to('Register', new_user_for_blog_registration_path) %>
+              <% if user_for_blog_signed_in? %>
+                <%= link_to('Edit', edit_user_for_blog_registration_path) %>
+              <% else %>
+                <%= link_to('Register', new_user_for_blog_registration_path) %>
+              <% end %>
             </span>
           </li>
           <li>
             <span class="glyphicon glyphicon-log-in" style="margin-top:15px">
-              <%= link_to('Login',  new_user_for_blog_session_path) %>
+              <% if user_for_blog_signed_in? %>
+                <%= link_to('Logout', destroy_user_for_blog_session_path, :method => :delete) %>
+              <% else %>
+                <%= link_to('Login', new_user_for_blog_session_path) %>
+              <% end %>
             </span>
           </li>
         </ul>
